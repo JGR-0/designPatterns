@@ -1,3 +1,5 @@
+using mediator;
+
 public interface IMediator {
-    void Notify(object sender, string ev);
+    void Send(string message, BaseComponent component);
 }

@@ -11,28 +11,16 @@ The mediator pattern has 4 different components:
 - Concrete Colleague: I receive messages from the mediator.
 ");
 
+var concreteMediator = new ConcreteMediator();
+
 var component1 = new Component1();
 var component2 = new Component2();
-var concreteMediate = new ConcreteMediator(component1, component2);
 
-ConsoleKeyInfo readKey;
-do 
-{
-    Console.WriteLine("Press A, B, C, D to execute a command or enter key to exit.");
-    readKey = Console.ReadKey();
-    Console.WriteLine();
-    if(readKey.KeyChar == 'A') {
-        component1.DoA();
-    }
-    else if(readKey.KeyChar == 'B') {
-        component1.DoB();
-    }
-    else if(readKey.KeyChar == 'C') {
-        component2.DoC();
-    }
-    else if(readKey.KeyChar == 'D') {
-        component2.DoD();
-    }
-    Console.WriteLine();
+concreteMediator.Register(component1);
+concreteMediator.Register(component2);
 
-}while (readKey.Key != ConsoleKey.Enter);
+component1.Send("Hi there! (from component1)");
+component2.Send("Hey! How are you? (from component2)");
+
+Console.WriteLine("Press any key to exit.");
+Console.ReadKey();

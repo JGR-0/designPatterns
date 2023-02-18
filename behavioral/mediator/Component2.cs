@@ -1,17 +1,10 @@
 namespace mediator 
 {
-public class Component2 : BaseComponent
-{
-    public void DoC() {
-        Console.WriteLine("Component 2 does C");
-
-        this._mediator.Notify(this, "C");
+    public class Component2 : BaseComponent
+    {
+        public override void HandleNotification(string message)
+        {
+            Console.WriteLine($"Component 2 receives the message: {message}");
+        }
     }
-
-    public void DoD() {
-        Console.WriteLine("Component 2 does D");
-
-        this._mediator.Notify(this, "D");
-    }
-}
 }
