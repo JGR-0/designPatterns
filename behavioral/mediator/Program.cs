@@ -13,11 +13,8 @@ The mediator pattern has 4 different components:
 
 var concreteMediator = new ConcreteMediator();
 
-var component1 = new Component1();
-var component2 = new Component2();
-
-concreteMediator.Register(component1);
-concreteMediator.Register(component2);
+var component1 = concreteMediator.CreateComponent<Component1>();
+var component2 = concreteMediator.CreateComponent<Component2>();
 
 component1.Send("Hi there! (from component1)");
 component2.Send("Hey! How are you? (from component2)");
