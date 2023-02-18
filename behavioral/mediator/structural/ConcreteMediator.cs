@@ -1,5 +1,3 @@
-namespace mediator
-{
 public class ConcreteMediator : IMediator {
     private List<BaseComponent> _components = new List<BaseComponent>();
 
@@ -23,5 +21,4 @@ public class ConcreteMediator : IMediator {
             .ToList()
             .ForEach(c => c.HandleNotification(message));
     }
-}
 }

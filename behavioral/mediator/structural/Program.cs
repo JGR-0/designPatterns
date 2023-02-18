@@ -1,6 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using mediator;
-
 Console.WriteLine("This is an example of the mediator pattern.");
 
 Console.WriteLine(@"

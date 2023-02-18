@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "designPatterns.behavioral.mediator", "behavioral\mediator\mediator.csproj", "{AE5B8825-A6E0-4CDC-9859-910F53ABBFDC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "designPatterns.behavioral.mediator.structural", "behavioral\mediator\structural\mediator.csproj", "{AE5B8825-A6E0-4CDC-9859-910F53ABBFDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "designPatterns.behavioral.mediator.unit.tests", "behavioral\mediator.unit.tests\mediator.unit.tests.csproj", "{85E51A65-A705-4AD2-A6C6-2A8E61C966F2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "behavioral", "behavioral", "{0F9410AD-A979-4D8F-9D6E-1A44FF436045}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mediator.chatRoom", "behavioral\mediator\chatRoom\mediator.chatRoom.csproj", "{CDF1CED1-3E01-43B5-85DF-8140DF56A047}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +26,12 @@ Global
 		{85E51A65-A705-4AD2-A6C6-2A8E61C966F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85E51A65-A705-4AD2-A6C6-2A8E61C966F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85E51A65-A705-4AD2-A6C6-2A8E61C966F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDF1CED1-3E01-43B5-85DF-8140DF56A047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDF1CED1-3E01-43B5-85DF-8140DF56A047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDF1CED1-3E01-43B5-85DF-8140DF56A047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDF1CED1-3E01-43B5-85DF-8140DF56A047}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CDF1CED1-3E01-43B5-85DF-8140DF56A047} = {0F9410AD-A979-4D8F-9D6E-1A44FF436045}
 	EndGlobalSection
 EndGlobal
