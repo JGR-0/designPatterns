@@ -33,8 +33,9 @@ app.MapControllers();
 using (var serviceScope = app.Services.CreateScope())
 {
     var context = serviceScope.ServiceProvider.GetService<ContactsContext>();
-    context.Database.EnsureCreated();
+    ArgumentNullException.ThrowIfNull(context);
+    await context.Database.EnsureCreatedAsync();
 }
 
-app.Run();
+await app.RunAsync();
 
