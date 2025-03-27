@@ -1,3 +1,5 @@
+namespace designPatterns.behavioral.mediator.structural;
+
 public class Component2 : BaseComponent
 {
     public override void HandleNotification(string message)

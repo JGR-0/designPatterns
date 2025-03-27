@@ -1,6 +1,12 @@
+namespace designPatterns.behavioral.mediator.structural;
+
 public abstract class BaseComponent {
     protected IMediator _mediator;
 
+    protected BaseComponent() 
+    {
+        _mediator = new ConcreteMediator();
+    }
     public void SetMediator(IMediator mediator) {
         _mediator = mediator;
     }

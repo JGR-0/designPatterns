@@ -5,7 +5,8 @@ public abstract class ChatMember {
     protected IChatRoom _chatRoom;
     public string Name { get; private set; }
 
-    public ChatMember(string name) {
+    protected ChatMember(string name) {
+        _chatRoom = new ChatRoom();
         Name = !string.IsNullOrWhiteSpace(name) ? name : $"{Guid.NewGuid()}-ChatMember";
     }
 
