@@ -1,3 +1,5 @@
+namespace designPatterns.behavioral.mediator.chatRoom;
+
 public class ContributorChatMember : ChatMember {
     public ContributorChatMember(string name) : base(name)
     {}

@@ -1,3 +1,5 @@
+namespace designPatterns.behavioral.mediator.chatRoom;
+
 public class AdminChatMember : ChatMember {
     public AdminChatMember(string name) : base(name)
     {}

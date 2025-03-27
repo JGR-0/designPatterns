@@ -1,9 +1,15 @@
+namespace designPatterns.behavioral.mediator.chatRoom;
+
 public class ChatRoom : IChatRoom {
 
-    private List<ChatMember> chatMembers = new List<ChatMember>();
+    private IEnumerable <ChatMember> chatMembers;
+
+    public ChatRoom() {
+        chatMembers = new List <ChatMember>();
+    }
 
     public void Register(ChatMember chatMember){
-        this.chatMembers.Add(chatMember);
+        chatMembers = chatMembers.Append(chatMember);
         chatMember.SetChatRoom(this);
     }
 

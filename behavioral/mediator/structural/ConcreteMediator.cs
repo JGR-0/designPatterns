@@ -1,10 +1,11 @@
+namespace designPatterns.behavioral.mediator.structural;
+
 public class ConcreteMediator : IMediator {
-    private List<BaseComponent> _components = new List<BaseComponent>();
+    private readonly List<BaseComponent> _components = new List<BaseComponent>();
 
     public ConcreteMediator() {}
 
     public void Register(BaseComponent component) {
-
         component.SetMediator(this);
         _components.Add(component);
     }
@@ -16,7 +17,7 @@ public class ConcreteMediator : IMediator {
     }
 
     public void Send(string message, BaseComponent component) {
-        this._components
+        _components
             .Where(c => c != component)
             .ToList()
             .ForEach(c => c.HandleNotification(message));

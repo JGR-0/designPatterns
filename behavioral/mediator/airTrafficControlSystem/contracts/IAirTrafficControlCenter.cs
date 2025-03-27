@@ -1,3 +1,5 @@
+namespace designPatterns.behavioral.mediator.airTrafficControlSystem.contracts;
+
 public interface IAirTrafficControlCenter
 {
 
