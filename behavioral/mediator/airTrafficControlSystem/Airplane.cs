@@ -1,3 +1,4 @@
+using System.Data.Common;
 using designPatterns.behavioral.mediator.airTrafficControlSystem.contracts;
 
 namespace designPatterns.behavioral.mediator.airTrafficControlSystem;
@@ -53,5 +54,13 @@ public class Position {
 
         return this.Longitude == objPosition.Longitude
             && this.Latitude == objPosition.Latitude;
+    }
+
+    public override int GetHashCode()
+    {
+        var hash = 13;
+        hash = (hash*7) + Latitude.GetHashCode();
+        hash = (hash*7) + Longitude.GetHashCode();
+        return hash;
     }
 }
