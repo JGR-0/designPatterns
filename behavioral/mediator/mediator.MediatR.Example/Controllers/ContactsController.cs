@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -30,7 +31,7 @@ public class ContactsController : Controller
 
 public class Query : IRequest<Contact>
 {
-    public int Id { get; set; }
+    public int? Id { get; set; }
 }
 
 public class ContactHandler : IRequestHandler<Query, Contact>
@@ -44,6 +45,8 @@ public class ContactHandler : IRequestHandler<Query, Contact>
         if(db is null) {
             throw new ArgumentException(nameof(db));
         }
+
+        ArgumentNullException.ThrowIfNull(request.Id);
 
         return await db.Contacts.SingleOrDefaultAsync(x => x.Id == request.Id, cancellationToken: cancellationToken);
     }

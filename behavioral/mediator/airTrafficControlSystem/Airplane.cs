@@ -24,9 +24,9 @@ public class Airplane {
 
     public Position CurrentPosition { get; private set; }
 
-    public float Altitude { get; private set; }
+    public decimal Altitude { get; private set; }
 
-    public float Speed { get; private set; }
+    public decimal Speed { get; private set; }
 
     public string Destination { get; private set; }
 }
@@ -38,9 +38,9 @@ public class Position {
         Longitude = longitude;
     }
 
-    public float Latitude { get; private set; }
+    public decimal Latitude { get; private set; }
 
-    public float Longitude { get; private set; }
+    public decimal Longitude { get; private set; }
 
     // override object.Equals
     public override bool Equals(object obj)
