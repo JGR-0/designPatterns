@@ -1,9 +1,17 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Welcome to the air traffic control system!");
+﻿namespace designPatterns.behavioral.mediator.airTrafficControlSystem;
 
-var communicationManagment = new CommunicationManagement();
+public class Program 
+{
+    public static void Main(string[] args) 
+    {
+        // See https://aka.ms/new-console-template for more information
+        Console.WriteLine("Welcome to the air traffic control system!");
 
-var airplane1 = new Airplane(communicationManagment, "Madrid");
-var airplane2 = new Airplane(communicationManagment, "Rome");
+        var communicationManagment = new CommunicationManagement();
 
-communicationManagment.SendMessage("Hello Airplane 2! ", airplane1, airplane2);
+        var airplane1 = new Airplane(communicationManagment, "Madrid");
+        var airplane2 = new Airplane(communicationManagment, "Rome");
+
+        communicationManagment.SendMessage("Hello Airplane 2! ", airplane1, airplane2);
+    }
+}

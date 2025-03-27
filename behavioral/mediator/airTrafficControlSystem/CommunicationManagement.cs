@@ -1,3 +1,7 @@
+using designPatterns.behavioral.mediator.airTrafficControlSystem.contracts;
+
+namespace designPatterns.behavioral.mediator.airTrafficControlSystem;
+
 public class CommunicationManagement : ICommunicationMediator
 {
     private List<Airplane> RegisteredAirplanes = new List<Airplane>();
