@@ -1,3 +1,5 @@
+namespace designPatterns.behavioral.mediator.chatRoom;
+
 public abstract class ChatMember {
 
     protected IChatRoom _chatRoom;

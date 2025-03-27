@@ -1,3 +1,5 @@
+namespace designPatterns.behavioral.mediator.chatRoom;
+
 public class ChatRoom : IChatRoom {
 
     private List<ChatMember> chatMembers = new List<ChatMember>();
