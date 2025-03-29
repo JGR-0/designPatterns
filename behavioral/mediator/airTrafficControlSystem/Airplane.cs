@@ -31,7 +31,7 @@ public class Airplane {
 
 public class Position {
 
-    public Position(float latitude, float longitude) {
+    public Position(decimal latitude, decimal longitude) {
         Latitude = latitude;
         Longitude = longitude;
     }
