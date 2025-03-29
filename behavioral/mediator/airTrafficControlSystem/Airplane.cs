@@ -5,14 +5,12 @@ namespace designPatterns.behavioral.mediator.airTrafficControlSystem;
 
 public class Airplane {
 
-    private ICommunicationMediator Mediator;
-    
     public Airplane(ICommunicationMediator mediator, string destination) {
         Id = Guid.NewGuid();
         CurrentPosition = new Position(0,0);
         Destination = destination;
-        Mediator = mediator;
-        Mediator.RegisterAirplane(this);
+        var _mediator = mediator;
+        _mediator.RegisterAirplane(this);
     }
 
     public void UpdateCurrentPosition(Position newPosition) {
